@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CounterApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="header-logo">
+                    <a class="header-logo-link">
+                        <img class="header-logo-link-img" src="images/appman.svg">Test Task for Frontend</a>
+                </div>
+            </header>
+            <div class="main-content">
+                <aside>
+                    <h2>
+                        <img class="aside-img" src="images/appman.svg">
+                    </h2>
+                    <nav class="aside-menu">
+                        <ul class="aside-menu-list">
+                            <li class="aside-menu-list-item">
+                                <a class="aside-menu-list-item-link">Home</a>
+                            </li>
+                            <li class="aside-menu-list-item">
+                                <a class="aside-menu-list-item-link">Users</a>
+                            </li>
+                            <li class="aside-menu-list-item">
+                                <a class="aside-menu-list-item-link">Reservations</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main>
+                    <form class="main-form" id="main-form">
+                        <button class="main-form-login-button" id="login-btn" type="submit">Login</button>
+                        <button class="main-form-reserve-button" id="reserve-btn" type="submit">Reserve</button>
+                    </form>
+                    <section class="login-popup" id="login-popup">
+                        <h2 class="login-popup-title">Log in</h2>
+                        <form class="login-popup-form" id="login-form">
+                            <input class="login-popup-form-input" id="loginField" type="text" placeholder="Enter your login" required>
+                            <input class="login-popup-form-input" id="passwordField" type="password" placeholder="Password" required>
+                            <button class="login-popup-form-button" id="submit-btn" type="submit">Login</button>
+                            <a class="login-popup-form-link">Lost your password?</a>
+                        </form>
+                        <a class="login-popup-close">X</a>
+                    </section>
+                    <section class="reserve-popup" id="reserve-popup">
+                        <h2 class="reserve-popup-title">Form Reservation</h2>
+                        <form class="reserve-popup-form" id="reserve-form">
+                            <input class="reserve-popup-form-input" id="nameField" type="text" placeholder="Enter your First Name" required>
+                            <input class="reserve-popup-form-input" id="secondNameField" type="text" placeholder="Enter your Second Name" required>
+                            <input class="reserve-popup-form-input" id="documentField" type="file" placeholder="Please, add your document" name="upload" accept="application/pdf, application/vnd.ms-excel, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet "
+                                required>
+                            <button class="reserve-popup-form-button" id="res-btn" type="submit">Reserve</button>
+                        </form>
+                        <a class="reserve-popup-close">X</a>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="js/all.min.js"></script>
+    </body>
+</html>

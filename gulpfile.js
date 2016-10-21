@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
     cleancss = require('gulp-clean-css'),
+    babel = require('gulp-babel'),
     batch = require('gulp-batch');
 
 gulp.task('build', ['clean', 'watch'], function () {
@@ -68,6 +69,9 @@ gulp.task('scripts', ['jshint'], function () {
     return gulp.src(SRC_PATH + 'scripts/**/*.js')
         .pipe(plumber())
         .pipe(concat('all.js'))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(uglify())
         .pipe(rename('all.min.js'))
         .pipe(gulp.dest(ASSETS_PATH + 'js'));

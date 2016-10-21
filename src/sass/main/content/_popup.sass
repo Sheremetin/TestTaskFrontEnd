@@ -1,0 +1,91 @@
+@import '../mixin/mixin'
+
+.login-popup, .reserve-popup
+  position: absolute
+  background: #e6e6e6
+  left: calc((100% - 450px) / 2)
+  top: calc((100% - 245px) / 2)
+  z-index: 2
+  border-radius: 5px
+  display: none
+
+  @include breakpoint(480px)
+    top: 50px
+    left: 0
+
+  &-title
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+    margin-top: 15px
+
+  &-form
+    width: 400px
+    margin: 25px
+
+    @include breakpoint(480px)
+      margin: 10px
+      width: calc(100% - 20px)
+
+    &-input
+      width: 100%
+      border: 1px solid #a3b0c2
+      border-radius: 3px
+      padding: 6px 12px
+      box-sizing: border-box
+      line-height: 24px
+      font-size: 14px
+      display: inline-block
+      color: #000
+      text-align: left
+      height: 30px
+      outline: none
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      vertical-align: middle
+      margin-bottom: 25px
+
+      &:focus
+        box-shadow: none !important
+        outline: none !important
+        -webkit-appearance: none !important
+        -moz-appearance: none !important
+        appearance: none !important
+
+    input[type="file"]
+      border: transparent
+      line-height: 16px
+      padding: 0
+
+    &-button
+      width: 100%
+      margin-bottom: 10px
+      outline: none !important
+      font-size: 14px
+      color: #fff
+      background: #45b0e3
+      border: 1px solid #45b0e3
+      padding: 6px
+      border-radius: 3px
+
+      &:focus
+        outline: none !important
+        -webkit-appearance: none !important
+        -moz-appearance: none !important
+        appearance: none !important
+
+    &-link
+      display: block
+      color: #0071bc
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+  &-close
+    position: absolute
+    right: 15px
+    top: 15px
+
+

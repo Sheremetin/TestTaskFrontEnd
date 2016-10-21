@@ -30,42 +30,8 @@ html(lang='en', ng-app='CounterApp')
               | Login
             button#reserve-btn.main-form-reserve-button(type='submit')
               | Reserve
-          section#login-popup.login-popup
-            h2.login-popup-title Log in
-            form#login-form.login-popup-form
-              input#loginField.login-popup-form-input(type='text',
-                                                placeholder='Enter your login',
-                                                required)
-              input#passwordField.login-popup-form-input(type='password',
-                                                   placeholder='Password',
-                                                   required)
-              button#submit-btn.login-popup-form-button(type='submit')
-                | Login
-              a.login-popup-form-link
-                | Lost your password?
-            a.login-popup-close X
-
-          section#reserve-popup.reserve-popup
-            h2.reserve-popup-title Form Reservation
-            form#reserve-form.reserve-popup-form
-              input#nameField.reserve-popup-form-input(type='text',
-                                                      placeholder='Enter your First Name',
-                                                      required)
-              input#secondNameField.reserve-popup-form-input(type='text',
-                                                            placeholder='Enter your Second Name',
-                                                            required)
-              input#documentField.reserve-popup-form-input(type='file',
-                                                                  placeholder='Please, add your document',
-                                                                  name='upload'
-                                                                  accept='application/pdf, ' +
-                                                                         'application/vnd.ms-excel, ' +
-                                                                         'application/msword, ' +
-                                                                         'application/vnd.openxmlformats-officedocument.wordprocessingml.document, ' +
-                                                                         'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet ',
-                                                                  required)
-              button#res-btn.reserve-popup-form-button(type='submit')
-                | Reserve
-            a.reserve-popup-close X
+          include content/sectionLogin.pug
+          include content/sectionReserve.pug
 
     script(src='js/all.min.js')
 

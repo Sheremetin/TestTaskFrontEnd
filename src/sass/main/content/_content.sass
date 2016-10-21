@@ -1,0 +1,38 @@
+.main-content
+  display: flex
+  justify-content: start
+  margin-top: 25px
+
+  aside
+    width: 30%
+
+    .aside-img
+      width: 35px
+      height: 35px
+
+    .aside-menu
+      margin-top: 25px
+
+      &-list
+        font-size: 16px
+        font-weight: 600
+
+        &-item
+          padding: 20px 0
+
+          &:hover
+            text-decoration: underline
+
+  main
+    width: 70%
+
+    .main-form
+      display: flex
+      justify-content: center
+
+      &-login-button, &-reserve-button
+        @extend .login-popup-form-button
+        width: 40%
+        margin: 5%
+
+    @import "popup"

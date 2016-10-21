@@ -1,0 +1,21 @@
+section#reserve-popup.reserve-popup
+  h2.reserve-popup-title Form Reservation
+  form#reserve-form.reserve-popup-form
+    input#nameField.reserve-popup-form-input(type='text',
+    placeholder='Enter your First Name',
+    required)
+    input#secondNameField.reserve-popup-form-input(type='text',
+    placeholder='Enter your Second Name',
+    required)
+    input#documentField.reserve-popup-form-input(type='file',
+    placeholder='Please, add your document',
+    name='upload'
+    accept='application/pdf, ' +
+           'application/vnd.ms-excel, ' +
+           'application/msword, ' +
+           'application/vnd.openxmlformats-officedocument.wordprocessingml.document, ' +
+           'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet ',
+    required)
+    button#res-btn.reserve-popup-form-button(type='submit')
+      | Reserve
+  a.reserve-popup-close X
